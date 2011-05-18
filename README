@@ -1,0 +1,55 @@
+PHP-Fancy is an AJAX CRUD framework for PHP. It's not Crude, it's Fancy...
+
+Copyright (c) 2011 Kamil Kupiec, kamil.kupiec[at]gmail.com
+
+Licensed under the MIT license:
+    http://www.opensource.org/licenses/mit-license.php
+
+
+PHP-Fancy is based on some Open Source projects:
+
+- ADOdb: http://adodb.sourceforge.net/
+- jQuery: http://jquery.com/
+- Jeditable plugin for jQuery: http://www.appelsiini.net/projects/jeditable
+
+The working example uses Smarty (http://www.smarty.net), but it's not mandatory.
+
+--- Getting started
+
+The framework core consists of 4 files:
+
+.
+ |- classes
+ |  |- Configuration.php
+ |  |- Database.php
+ |  |- FancyMapper.php
+ |
+ | -ajax
+    |- fancyhandler.php
+
+jQery and Jeditable scripts are located in the 'js' folder.
+ADOdb and Smarty are in the 'libs' folder and CCS files are located in the 'css' folder.
+Pretty simple, huh?
+
+NOTE:
+If you want to use Smarty, please read the comment in the classes/Display.php class.
+
+The example use of the FancyMapper class is presented in the index.php file, which uses Smarty (via the Display class) to render the page using the template located in templates/index.tpl.
+
+I recomend using Smarty on any other template engine for separating PHP from HTML code.
+
+Enjoy.
+
+--- Changelog:
+
+0.9
+    First version functionalities:
+- Create (not so fancy, because not via AJAX)
+- Read (also not via AJAX)
+- Update
+- Delete
+
+    No:
+- session controll (do it yourself ^^)
+- validation of the data sent by the user
+
